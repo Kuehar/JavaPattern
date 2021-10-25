@@ -1,4 +1,6 @@
 // Perfect Java P.24
+// コマンドライン引数で与えた文字列をメールのFromヘッダの行として<>を除外し、メールアドレスを抽出するコード
+// treating giving String argument such as mail header with cmd as mailaddres, and extracting mailaddres by excluding '<','>' from mail header.
 
 class Main{
 	public static void main(String... args) {
