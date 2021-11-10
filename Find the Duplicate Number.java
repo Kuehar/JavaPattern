@@ -1,5 +1,7 @@
 import java.util.*;
 
+// O(N)
+
 class Solution {
     public int findDuplicate(int[] nums) {
         Set<Integer> seen = new HashSet<Integer>();
