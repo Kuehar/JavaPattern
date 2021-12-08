@@ -38,4 +38,15 @@ public class competitiveProgramming {
 		}
 		return true;
 	}	
+	
+	
+	/*
+	* アナグラムかどうかを判別する時に使うソートメソッド
+	*/
+	public String sort(String s) {
+		char[] content = s.toCharArray();
+		java.util.Arrays.sort(content);
+		return new String(content);	
+	}	
+
 }
