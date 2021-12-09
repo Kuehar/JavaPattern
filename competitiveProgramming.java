@@ -48,5 +48,14 @@ public class competitiveProgramming {
 		java.util.Arrays.sort(content);
 		return new String(content);	
 	}	
+	/*
+	* ソートしていい場合にはソートしてそれぞれを比較すればOK
+	*/
+	public boolean permutation(String s, String t) {
+		if(s.length() != t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}	
 
 }
