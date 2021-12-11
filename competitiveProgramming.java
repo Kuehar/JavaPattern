@@ -124,5 +124,33 @@ public class competitiveProgramming {
 		}
 		return myStr + last + count;
 	}
+	
+	/*
+	 * 文字列圧縮アルゴリズム(そこそこ良さげ)
+	 */
+	String compressBetter(String str) {
+		// 圧縮後の文字列が長くなるかをチェック
+		int size = countCompression(str);
+		if(size >= str.length()) {
+			return str;
+		}
+		
+		StringBuffer myStr = new StringBuffer();
+		char last = str.charAt(0);
+		int count = 1;
+		for(int i=1;i<str.length();i++) {
+			if(str.charAt(i) == last) {
+				count++;
+			}else {
+				myStr.append(last);
+				myStr.append(count);
+				last = str.charAt(i);
+				count = 1;
+			}
+		}
+		myStr.append(last);
+		myStr.append(count);
+		return myStr.toString(); 
+	}
 
 }
